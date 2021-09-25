@@ -1,16 +1,29 @@
 <template>
   <div>
     <el-container class="layout-container">
-      <el-header class="header-music">Header</el-header>
+      <el-header class="header-music">
+          <top-bar></top-bar>
+      </el-header>
       <el-main class="main-music">Main</el-main>
-      <el-footer class="footer-music">Footer</el-footer>
+      <el-footer class="footer-music">
+          <bottom-bar></bottom-bar>
+      </el-footer>
     </el-container>
   </div>
 </template>
 
 <script>
+import TopBar from "components/content/topBar/TopBar.vue";
+import BottomBar from "components/content/bottomBar/BottomBar.vue"
+
+
 export default {
   name: "Layout",
+  components:{
+      TopBar,
+      BottomBar
+   
+  }
 };
 </script>
 
